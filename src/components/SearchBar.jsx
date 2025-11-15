@@ -10,17 +10,25 @@ export default function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
-      <input
-        type="text"
-        value={query}
-        placeholder="Search a device…"
-        onChange={(e) => setQuery(e.target.value)}
-        style={{ flex: 1, padding: "10px" }}
-      />
-      <button type="submit" style={{ padding: "10px 20px", cursor: "pointer" }}>
-        Search
-      </button>
-    </form>
+    <form
+  onSubmit={handleSubmit}
+  className="flex flex-col sm:flex-row gap-3 mb-6"
+>
+  <input
+    type="text"
+    value={query}
+    placeholder="Search a device…"
+    onChange={(e) => setQuery(e.target.value)}
+    className="flex-1 p-3 border rounded"
+  />
+
+  <button
+    type="submit"
+    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded"
+  >
+    Search
+  </button>
+</form>
+
   );
 }

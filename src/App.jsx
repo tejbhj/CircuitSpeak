@@ -20,11 +20,12 @@ function App() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>CircuitSpeak</h1>
-      <SearchBar onSearch={handleSearch} />
-      <ProductResults results={results} />
-    </div>
+  <div className="max-w-3xl mx-auto p-4">
+    <h1 className="text-3xl font-bold mb-4">CircuitSpeak</h1>
+
+    <SearchBar onSearch={handleSearch} />
+    <ProductResults results={results} />
+  </div>
   );
 }
 

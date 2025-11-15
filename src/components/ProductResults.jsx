@@ -6,9 +6,12 @@ export default function ProductResults({ results }) {
       <h2>Search Results (placeholder)</h2>
       <ul>
         {results.map((item, index) => (
-          <li key={index} style={{ marginBottom: "15px", padding: "10px", border: "1px solid #ccc" }}>
-            <strong>{item.name}</strong>
-          </li>
+          <li
+  key={index}
+  className="border rounded p-4 mb-4 shadow-sm hover:shadow-md transition"
+>
+  <strong className="block text-lg">{item.name}</strong>
+</li>
         ))}
       </ul>
     </div>
